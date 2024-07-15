@@ -10,6 +10,8 @@ postController.createPost = (data) => {
     title: data.title,
     desc: data.desc,
     url: data.url,
+    authorId: data.authorId, 
+    category: data.category,
     createdAt: new Date(),
     updateAt: new Date(),
     upvotes: 0,

@@ -27,7 +27,7 @@ userController.createUser = (userData) => {
     name: userData.name,
     email: userData.email,
     password: userData.password,
-    userType: "user",
+    userType: userData.userType || "user",
     createdAt: new Date(),
     updatedAt: new Date(),
   };

@@ -8,11 +8,23 @@ block body
     input(type="text" class="input input-bordered w-full max-w-sm" name="title" placeholder="Website Name" minlength="3" required)
     input(type="text" class="input input-bordered w-full max-w-sm" name="desc" placeholder="Website Description")
     input(type="url" class="input input-bordered w-full max-w-sm" name="url" placeholder="Website Url" minlength="3" required)
-    <select class="select select-bordered w-full max-w-sm">
-      <option disabled selected>Category</option>
-      <option>Design</option>
-      <option>Coding</option>
-      <option>Option 3</option>
-    </select>
-    
+    select(id="category" class="select select-bordered w-full max-w-sm" name="category" required)
+      option(disabled selected) category
+      option Business and Finance 💼
+      option Career and Job Search 📈
+      option Design and Creativity 🎨
+      option Development and Programming 💻
+      option Education and Learning 🎓
+      option Entertainment and Media 🎬
+      option Environment and Sustainability 🌱
+      option Health and Wellness 🏥
+      option Legal and Government Resources ⚖️
+      option Lifestyle and Hobbies 🌟
+      option News and Information 📰
+      option Productivity and Tools 🛠️
+      option Security and Privacy 🔒
+      option Shopping and Deals 🛍️
+      option Social and Community 🌐
+
+
     button(type="submit" class="btn btn-primary") Create

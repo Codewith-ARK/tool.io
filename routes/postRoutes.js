@@ -14,6 +14,8 @@ router.post("/new", verifyToken, async (req, res) => {
     title: req.body.title,
     desc: req.body.desc || "",
     url: req.body.url,
+    authorId: req.user.payload,
+    category: req.body.category,
   };
 
   try {
