@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tool.io - Signup</title>
+  <link rel="icon" type="image/x-icon" href="#">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <section class="flex justify-center flex-col items-center gap-3 w-screen h-screen">
+    <h1 class="text-5xl font-bold">Signup</h1>
+    <p>Please Signup to continue</p>
+    <form id="signupForm" class="flex flex-col gap-3">
+      <label class="input input-bordered flex items-center gap-2">
+        <input name="fullName" id="name" type="text" class="grow" placeholder="Full Name" required minlength="3" />
+      </label>    
+
+      <label class="input input-bordered flex items-center gap-2">
+        <input name="email" id="email" type="email" class="grow" placeholder="Email" required/>
+      </label>    
+      <label class="input input-bordered flex items-center gap-2">
+        <input name="password" id="password" type="password" class="grow" placeholder="Password (min: 8 characters)" minlength="8" required/>
+      </label>
+      <div class="form-control">
+        <label class="label cursor-pointer">
+          <span class="label-text">Show password</span>
+          <input type="checkbox" id="showPassword" class="checkbox checkbox-primary" />
+        </label>
+      </div>
+
+      <button class="btn btn-primary btn-wide" type="submit">Signup</button>
+      <p>Already a user? Click here to <a href="/login" class="link link-primary">login</a></p>
+    </form>
+    <p id="messageBox" class="text-base text-green-400"></p>
+    <p id="errorBox" class="text-base text-red-500"></p>
+
+  </section>
+  
+  <script src="/js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="/js/signupFormHandler.js"></script>
+</body>
+</html>

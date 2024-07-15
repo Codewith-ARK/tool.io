@@ -1,0 +1,32 @@
+mixin heading(text)
+  h1(class="mt-6 text-5xl font-bold")=text
+
+mixin subheading(text)
+  h2(class="mb-6")=text
+
+mixin breadcrumb(...links)
+  .breadcrumbs.text-sm
+    ul
+      each link in links
+        li
+          a(href=`/${link}`)=link
+
+mixin navigation()
+  button.btn.btn-sm.btn-outline(onclick="history.back()") Go back
+
+mixin formInput(labelText, name)
+  div 
+    label(for="" class="form-control w-full max-w-xs") 
+    .label 
+      label(for="" class="label-text")=labelText
+    input(type="text" placeholder="" class="input input-bordered w-full max-w-xs" name=name)
+
+mixin card(id, title, desc, link, isAdmin)
+  a(href=link)
+    div(class="card bg-base-300 shadow-xl")
+      .card-body
+        h4.card-title=title
+        p=desc
+        if isAdmin
+          .flex.justify-end.gap-4
+            a(href=`/post/delete/${id}` class="btn btn-ghost btn-error")

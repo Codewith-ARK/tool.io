@@ -1,0 +1,18 @@
+extends include/dashboard
+
+block body
+  +heading('Create post')
+  +subheading('Create a new post.')
+
+  form(action="/post/new", method="POST" class="flex flex-col items-start gap-4") 
+    input(type="text" class="input input-bordered w-full max-w-sm" name="title" placeholder="Website Name" minlength="3" required)
+    input(type="text" class="input input-bordered w-full max-w-sm" name="desc" placeholder="Website Description")
+    input(type="url" class="input input-bordered w-full max-w-sm" name="url" placeholder="Website Url" minlength="3" required)
+    <select class="select select-bordered w-full max-w-sm">
+      <option disabled selected>Category</option>
+      <option>Design</option>
+      <option>Coding</option>
+      <option>Option 3</option>
+    </select>
+    
+    button(type="submit" class="btn btn-primary") Create

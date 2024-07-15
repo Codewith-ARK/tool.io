@@ -1,0 +1,14 @@
+extends include/dashboard
+
+block body
+  +heading('All post')
+  +subheading('View all posts.')
+
+  a(href="/post/new" class="group fixed bottom-16 right-6 btn btn-primary")
+    p(class="hidden group-hover:block transition-all duration-300") New Post
+    svg(xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24")
+      path(d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z") 
+
+  div(class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4")
+    each post in data
+      +card(post._id, post.title, post.desc, post.url)

@@ -1,0 +1,29 @@
+extends include/dashboard
+
+block title
+  | Tool.io - User Profile 
+
+block body
+  +heading('Profile')
+  +subheading('View your profile details.')
+
+  main.flex.flex-col.gap-4
+
+    label.form-control.w-full.max-w-xs
+      div.label
+        span.label-text.font-semibold Full Name
+      input(class="input input-bordered w-full max-w-xs" type="text" placeholder="Full Name" value=data.name readonly)
+
+    label.form-control.w-full.max-w-xs
+      div.label
+        span.label-text.font-semibold Email
+      input(class="input input-bordered w-full max-w-xs" type="email" placeholder="Email" value=data.email readonly)
+
+    label.form-control.w-full.max-w-xs
+      div.label
+        span.label-text.font-semibold User Type
+      input(class="input input-bordered w-full max-w-xs" type="text" placeholder="User Type" value=data.userType readonly)
+
+
+
+
