@@ -15,7 +15,7 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ({ 
   setThemeBasedOnPreference(matches);
 });
 
-if(location.href === "/login" || location.href === "/signup"){
+if(location.href.includes("/login") || location.href.includes("/signup")){
   document.querySelector("#showPassword").addEventListener("change", () => {
     const elem = document.getElementById("password");
     if (elem.type === "password") {
