@@ -10,7 +10,7 @@ document.querySelector("#loginForm").addEventListener("submit", (e) => {
       if (res.status === 200) {
         document.querySelector(
           "#messageBox"
-        ).innerHTML = `${res.data.message} You will be redirected to <a class="link" href="/home">Home</>`;
+        ).innerHTML = `${res.data.message} You will be redirected to <a class="link" href="/app">Home</>`;
         setTimeout(function () {
           location.href = "/app";
         }, 3000);
